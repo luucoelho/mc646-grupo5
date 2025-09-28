@@ -68,9 +68,11 @@ public class Product implements Serializable {
     private String dimensions;
 
     @NotNull
+    @Past
     @Column(name = "date_added", nullable = false)
     private Instant dateAdded;
 
+    @PastOrPresent
     @Column(name = "date_modified")
     private Instant dateModified;
 
